@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What Is My IP Address - See Your Public Address</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Create a webpage similar to whatismyipaddress.com that displays user's IP information"/>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+  <!-- Google Fonts: Inter -->
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@3.3.1/400.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #f7fafc; }
+    .flag { width: 24px; height: 16px; margin-left: 6px; vertical-align: middle; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+      <span class="text-2xl font-bold text-blue-600"><i class="fas fa-network-wired mr-2"></i>WhatIsMyIPAddress</span>
+      <nav>
+        <a href="#faq" class="text-gray-600 hover:text-blue-700 mx-2 font-medium">FAQ</a>
+        <a href="#why-change-ip" class="text-gray-600 hover:text-blue-700 mx-2 font-medium">Why Change IP?</a>
+        <a href="#contact" class="text-gray-600 hover:text-blue-700 mx-2 font-medium">Contact</a>
+      </nav>
+    </div>
+  </header>  <main class="flex-1">
+    <section class="bg-gradient-to-tr from-blue-100 via-blue-50 to-white py-16">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-blue-700 mb-4">What Is My IP Address?</h1>
+        <p class="text-xl text-gray-600 mb-8">Find out your public IP address instantly. Your unique online identifier is shown below.</p>
+        <div class="inline-block px-8 py-6 rounded-lg shadow-lg bg-white border border-blue-100 mb-5">
+          <div class="flex flex-col items-center justify-center">
+            <span class="text-lg text-gray-500"><i class="fas fa-globe-americas mr-2 text-blue-500"></i>Your Public IP Address</span>
+            <span id="ipAddress" class="mt-2 text-2xl md:text-3xl font-mono text-blue-900">Loading...</span>
+            <span id="ipVersion" class="text-sm text-gray-400"></span>
+            <span id="ipLocation" class="block text-sm text-gray-600 mt-1"></span>
+            <button id="copyBtn" class="mt-3 px-4 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600">Copy IP</button>
+          </div>
+        </div><!-- IP Search Box -->
+    <div class="mt-6 text-left max-w-xl mx-auto">
+      <label for="searchIP" class="block text-gray-700 mb-2 font-medium">Search Any IP Address:</label>
+      <div class="flex items-center">
+        <input id="searchIP" type="text" placeholder="Enter IP address..." class="flex-1 px-4 py-2 border rounded-l text-sm focus:outline-none">
+        <button id="searchBtn" class="px-4 py-2 bg-blue-500 text-white rounded-r hover:bg-blue-600">Search</button>
+      </div>
+      <div id="searchResult" class="mt-3 text-sm text-gray-700"></div>
+    </div>
+
+    <div class="text-gray-600 text-sm mt-6">
+      <p>
+        This page uses your real-time connection to display your current IP. 
+        <span class="font-bold">Your IP address</span> is assigned by your Internet Service Provider and can be used to determine your location, ISP and more.
+      </p>
+    </div>
+  </div>
+</section>
+
+  </main>  <footer class="bg-white border-t">
+    <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between text-gray-600 text-sm">
+      <div>
+        &copy; 2024 WhatIsMyIPAddress - Crafted for privacy & transparency
+      </div>
+      <div class="flex space-x-4 mt-2 md:mt-0">
+        <a href="https://whatismyipaddress.com/" target="_blank" rel="noopener" class="hover:text-blue-700"><i class="fas fa-external-link-alt mr-1"></i>Original Inspiration</a>
+        <a href="mailto:support@example.com" class="hover:text-blue-700"><i class="fas fa-envelope mr-1"></i>Contact</a>
+        <a href="#top" class="hover:text-blue-700"><i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer><section class="bg-white py-12 border-t">
+  <div class="container mx-auto px-4 text-gray-700 text-sm space-y-4">
+    <h2 class="text-2xl font-bold text-blue-600">What Is My IP Address? Logo</h2>
+    <p>My IP | IP Lookup | Hide My IP | VPNS | Tools | Learn | About | Press | Blog | Support | IP</p><h3 class="text-xl font-semibold text-gray-800 mt-6">Look up IP Address Location</h3>
+<p>If you can find out the IPv4 or IPv6 address of an Internet user, you can get an idea what part of the country or world they're in by using our IP Lookup tool. What to do: Enter the IP address you're curious about in the box below, then click "Get IP Details."</p>
+
+<p><strong>How to get someone's IP address:</strong> Once you have an IP address it is as easy as pasting and clicking above. But if you don't know how to get someone's IP address read: <a href="#" class="text-blue-500 underline">11 Ways To Get Someone's IP Address</a></p>
+
+<h4 class="font-semibold text-gray-800 mt-4">What you will get with this tool</h4>
+<ul class="list-disc list-inside">
+  <li>The ISP and organization's name</li>
+  <li>The IP's host name</li>
+  <li>The country it's in</li>
+  <li>The region/state</li>
+  <li>The city (see below)</li>
+  <li>The latitude and longitude of the location (a best guess)</li>
+  <li>The area code for that region</li>
+  <li>Any known services running on that IP</li>
+</ul>
+
+<h4 class="font-semibold text-gray-800 mt-4">What you won't get</h4>
+<ul class="list-disc list-inside">
+  <li>A person's name</li>
+  <li>The exact location or street address</li>
+  <li>A phone number</li>
+  <li>Their email address</li>
+</ul>
+<p>That's where privacy issues come in, which are there to protect Internet users like you.</p>
+
+<h4 class="font-semibold text-gray-800 mt-4">A word about accuracy</h4>
+<p>In countries outside the US and Europe the accuracy for the city level 25mile/40km radius is around 55%.</p>
+<ul class="list-inside">
+  <li><strong>99%</strong> Country</li>
+  <li><strong>90%</strong> State/Region</li>
+  <li><strong>81%</strong> City (&lt;25MI/40KM)</li>
+</ul>
+
+<div class="bg-red-50 text-red-600 px-4 py-3 rounded mt-4 border border-red-200">
+  <strong>Your private information may be exposed!</strong>
+  <br>
+  <a href="#" class="text-red-600 underline font-medium">Hide My IP Address Now</a>
+</div>
+
+<h3 class="text-xl font-semibold text-gray-800 mt-6">More facts and details about looking up IP addresses</h3>
+<p>Pretty much all that anyone cares about when we go on the Internet is that our connection works. We leave all the connectivity issues to people who know what they’re doing. Still, a little knowledge can go a long way...</p>
+
+<p>“What Is My IP Address?”<br>As you’re reading this, you’re on the website WhatIsMyIPAddress.com, and you probably first came here to check your IP address.</p>
+
+<p>The story behind WhatIsMyIPAddress.com</p>
+<p>It wasn’t always so easy to find your own IP address, according to Chris Parker, CEO and founder of WhatIsMyIPAddress.com. “Way back in the mid-nineties...”</p>
+
+<h3 class="text-xl font-semibold text-gray-800 mt-6">IP Lookup Tools and more</h3>
+<p>Chris Parker was surprised to discover that thousands of people were coming to his website weekly. Soon, he would develop additional tools and content to give people more help and information they might want and couldn’t find easily elsewhere.</p>
+
+<p>For instance, If a person says they’re a soldier stationed in California, but when you looked up their IP address, you discovered their connection places them in India, that would be something to be concerned about.</p>
+
+<p>The IP Lookup tool (the page you’re on right now) does just that. It’s a simple way to get some information on a computer-user without invading their privacy.</p>
+
+<p>The IP Lookup page and tool provides the same information about an IP address that you can find about your own IP address.</p>
+
+<h4 class="font-semibold text-gray-800 mt-4">The information you find from the IP Lookup page</h4>
+<ul class="list-disc list-inside">
+  <li>ISP: Internet Service Provider</li>
+  <li>City the IP address is in</li>
+  <li>Region and country</li>
+  <li>Host name</li>
+  <li>ASN: a specific number</li>
+  <li>Services running on that IP</li>
+  <li>Latitude and longitude</li>
+  <li>Area code</li>
+</ul>
+
+<p>And again, this information is public. Anyone on the internet, from companies you do business with to friends and family you email with, can see your IP Address and lookup up details on it.</p>
+
+  </div>
+</section>  <script>
+    async function fetchIP() {
+      const ipEl = document.getElementById('ipAddress');
+      const ipVersionEl = document.getElementById('ipVersion');
+      const ipLocationEl = document.getElementById('ipLocation');
+      try {
+        const delay = Math.floor(Math.random() * 2000) + 3000; // 3-5 second delay
+        await new Promise(resolve => setTimeout(resolve, delay));
+
+        const response = await fetch('http://ip-api.com/json/');
+        if (!response.ok) throw new Error("Failed to fetch IP info");
+        const data = await response.json();
+        ipEl.textContent = data.query;
+        let version = (data.query.indexOf(':') !== -1) ? 'IPv6' : 'IPv4';
+        ipVersionEl.textContent = `(${version})`;
+        ipLocationEl.innerHTML = `\u{1F4CD} ${data.city}, ${data.regionName}, ${data.country} — ${data.isp} <img src='https://flagcdn.com/24x18/${data.countryCode.toLowerCase()}.png' class='flag'>`;
+      } catch (e) {
+        ipEl.textContent = "Cannot retrieve IP";
+        ipVersionEl.textContent = "";
+        ipLocationEl.textContent = "";
+      }
+    }
+
+    document.getElementById('copyBtn').addEventListener('click', () => {
+      const ip = document.getElementById('ipAddress').textContent;
+      navigator.clipboard.writeText(ip).then(() => {
+        alert('IP copied to clipboard!');
+      });
+    });
+
+    document.getElementById('searchBtn').addEventListener('click', async () => {
+      const ip = document.getElementById('searchIP').value.trim();
+      const resultEl = document.getElementById('searchResult');
+      if (!ip) {
+        resultEl.textContent = "Please enter a valid IP address.";
+        return;
+      }
+      resultEl.textContent = "Searching...";
+      try {
+        const response = await fetch(`http://ip-api.com/json/${ip}`);
+        if (!response.ok) throw new Error("Failed to fetch IP info");
+        const data = await response.json();
+        if (data.status === 'fail') {
+          resultEl.textContent = "Invalid IP address or not found.";
+          return;
+        }
+        resultEl.innerHTML = `\u{1F4CD} ${data.city}, ${data.regionName}, ${data.country} — ${data.isp} <img src='https://flagcdn.com/24x18/${data.countryCode.toLowerCase()}.png' class='flag'>`;
+      } catch (err) {
+        resultEl.textContent = "Something went wrong. Please try again later.";
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', fetchIP);
+  </script></body>
+</html>
